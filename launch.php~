@@ -1,0 +1,10 @@
+<html>
+<head></head>
+<body>
+<form method="post" action="launchIt.php">
+<input type="text" size="30" value="campaignName" name="campaign" onFocus=this.value="";>
+<input type="submit" value="Populate Victims">
+</form>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<html>
+<head>
+</head>
+<body>
+<h1>Senders List</h1><br>
+
+<form action="populateSender.php" method="post">
+
+<input type="text" size="30" value="Name" name="naam0" onFocus=this.value="";> <input type="text" size="30" value="email" name="email0" onFocus=this.value="";><input type="text" size="30" value="reply-to" name="replyto0" onFocus=this.value="";><br>
+<input type="text" size="30" value="Name" name="naam1" onFocus=this.value="";> <input type="text" size="30" value="email" name="email1" onFocus=this.value="";><input type="text" size="30" value="reply-to" name="replyto1" onFocus=this.value="";><br>
+<input type="text" size="30" value="Name" name="naam2" onFocus=this.value="";> <input type="text" size="30" value="email" name="email2" onFocus=this.value="";><input type="text" size="30" value="reply-to" name="replyto2" onFocus=this.value="";><br>
+<input type="text" size="30" value="Name" name="naam3" onFocus=this.value="";> <input type="text" size="30" value="email" name="email3" onFocus=this.value="";><input type="text" size="30" value="reply-to" name="replyto3" onFocus=this.value="";><br>
+<input type="text" size="30" value="Name" name="naam4" onFocus=this.value="";> <input type="text" size="30" value="email" name="email4" onFocus=this.value="";><input type="text" size="30" value="reply-to" name="replyto4" onFocus=this.value="";><br>
+
+
+<input type="submit" value="Populate Senders">
+</form>
+
+
+
+
+</body>
+

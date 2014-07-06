@@ -1,0 +1,26 @@
+<html>
+<head>
+</head>
+<body>
+<h1>Victims List</h1><br>
+
+<form action="populateVictim.php" method="post">
+
+<input type="text" size="30" value="Name" name="naam0" onFocus=this.value="";> <input type="text" size="30" value="email0" name="email" onFocus=this.value="";><br>
+
+<input type="text" size="30" value="Name" name="naam1" onFocus=this.value="";> <input type="text" size="30" value="email1" name="email" onFocus=this.value="";><br>
+
+<input type="text" size="30" value="Name" name="naam2" onFocus=this.value="";> <input type="text" size="30" value="email2" name="email" onFocus=this.value="";><br>
+
+<input type="text" size="30" value="Name" name="naam3" onFocus=this.value="";> <input type="text" size="30" value="email3" name="email" onFocus=this.value="";><br>
+
+<input type="text" size="30" value="Name" name="naam4" onFocus=this.value="";> <input type="text" size="30" value="email4" name="email" onFocus=this.value="";><br>
+
+<input type="submit" value="Populate Victims">
+</form>
+
+
+
+
+</body>
+

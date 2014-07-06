@@ -1,0 +1,87 @@
+<?php
+
+$c=$_GET['campaign'];
+
+$f=$c.'/Subject.txt';
+$file_handle = fopen($f, "r");
+while (!feof($file_handle)) {
+   $line = fgets($file_handle);
+   $m=$line;
+}
+fclose($file_handle);
+
+$subject=$m;
+
+
+$victim=array();
+
+$f=$c.'/Victims.txt';
+$file_handle = fopen($f, "r");
+while (!feof($file_handle)) {
+   $line = fgets($file_handle);
+   $victim[]=$line;
+}
+fclose($file_handle);
+
+
+$sender=array();
+$f=$c.'/Senders.txt';
+
+$file_handle = fopen($f, "r");
+while (!feof($file_handle)) {
+   $line = fgets($file_handle);
+   $sender[]=$line;
+}
+fclose($file_handle);
+
+
+$dir = $c."/attachment/";
+if (is_dir($dir)) {
+    if ($dh = opendir($dir)) {
+        while (($file = readdir($dh)) !== false) {
+           
+	if(filetype($dir . $file)=='file')		
+	$attachment=$file;
+		
+        }
+	$body=$c."/attachment/".$attachment;
+        closedir($dh);
+    }
+}
+
+
+$dir = $c."/body/";
+if (is_dir($dir)) {
+    if ($dh = opendir($dir)) {
+        while (($file = readdir($dh)) !== false) {
+           
+	if(filetype($dir . $file)=='file')		
+	$body=$file;
+		
+        }
+	$body=$c."/body/".$body;
+        closedir($dh);
+    }
+}
+
+
+for($x=0,$y=0;$x<count($victim);$x++,$y++)
+	{
+	if (strpos($victim[$x],"@"))	
+	{	
+	$v=explode(",",$victim[$x]);
+	$a=explode(",",$sender[$y]);
+	echo $a[1].",".$a[0]."<br>";  //from@example.com first last 
+	echo $a[2].",".$a[0]."<br>";  //replyto@example.com  first last
+	echo $v[1].",".$v[0]."<br>";  //whoto@example.com  first last
+	echo $subject."<br>";  	    //subject
+	echo $body."<br>";	    //body
+	echo $attachment."<br><br><br>";	    //attachment
+	}
+	if ($y=count($sender))
+		$y=0;
+
+	}
+
+
+?>
