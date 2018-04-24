@@ -73,7 +73,7 @@ $senders=explode("*",$meat1,-1);
 
 
 
-//$victims=array("tiwaryshailesh@outlook.com","vikramandroid9@gmail.com");
+//$victims=array("kjhkjsfh@outlook.com","klhlgh@gmail.com");
 //$senders=array("Shahrukh Khan,shahrukh@filmfare.com","Shahrukh Khan,shahrukh@filmfare.com");
 
 
